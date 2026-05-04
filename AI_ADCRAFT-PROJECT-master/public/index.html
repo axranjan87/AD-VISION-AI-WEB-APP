@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>AI Ad Generator</title>
+	<link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+	<header class="container">
+		<h1>AI Ad Generator</h1>
+		<p>Create high-converting ad copy and video ads in seconds.</p>
+		<div class="mode-toggle">
+			<button id="text-mode-btn" class="mode-btn active">Text Ads</button>
+			<button id="video-mode-btn" class="mode-btn">Video Ads</button>
+		</div>
+	</header>
+
+	<main class="container card">
+		<form id="ad-form">
+			<label>
+				<span>Product / Service</span>
+				<textarea name="product" placeholder="Describe what you're advertising" required></textarea>
+			</label>
+
+			<div class="grid">
+				<label>
+					<span>Target Audience</span>
+					<input name="audience" placeholder="e.g., Busy professionals" />
+				</label>
+				<label>
+					<span>Tone</span>
+					<select name="tone">
+						<option>persuasive</option>
+						<option>friendly</option>
+						<option>professional</option>
+						<option>witty</option>
+						<option>luxury</option>
+					</select>
+				</label>
+			</div>
+
+			<div class="grid">
+				<label>
+					<span>Platform</span>
+					<select name="platform">
+						<option>generic</option>
+						<option>Google Ads</option>
+						<option>Facebook</option>
+						<option>Instagram</option>
+						<option>LinkedIn</option>
+						<option>Twitter/X</option>
+					</select>
+				</label>
+				<label>
+					<span>Language</span>
+					<input name="language" value="English"/>
+				</label>
+			</div>
+
+			<div class="grid">
+				<label>
+					<span>Length</span>
+					<select name="length">
+						<option>short</option>
+						<option>medium</option>
+						<option>long</option>
+					</select>
+				</label>
+				<div class="actions">
+					<button type="submit" id="generate-btn">Generate Ads</button>
+				</div>
+			</div>
+		</form>
+
+		<section id="text-results" class="results hidden">
+			<div class="results-header">
+				<h2>Text Ad Results</h2>
+				<div class="results-actions">
+					<button id="copy-btn" class="secondary">Copy All</button>
+				</div>
+			</div>
+			<pre id="output"></pre>
+		</section>
+
+		<section id="video-results" class="results hidden">
+			<div class="results-header">
+				<h2>Video Ad Results</h2>
+				<div class="results-actions">
+					<button id="download-video-btn" class="secondary">Download Video</button>
+				</div>
+			</div>
+			<div id="video-container">
+				<video id="video-output" controls style="display: none; width: 100%; max-width: 800px; border-radius: 12px; margin-top: 16px;"></video>
+				<div id="video-status" class="video-status"></div>
+			</div>
+		</section>
+	</main>
+
+	<footer class="container footer">
+		<span>Built with OpenAI & Free Video APIs • <a href="https://veo3api.com/free-api" target="_blank" rel="noreferrer">Get free video API key</a></span>
+	</footer>
+
+	<script src="/app.js"></script>
+</body>
+</html>

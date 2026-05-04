@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Ad-Vision AI logo">
+  <defs>
+    <linearGradient id="g" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#22c55e"/>
+      <stop offset="100%" stop-color="#10b981"/>
+    </linearGradient>
+  </defs>
+  <rect x="4" y="4" width="56" height="56" rx="14" fill="#0f172a"/>
+  <rect x="8" y="8" width="48" height="48" rx="12" fill="url(#g)" opacity="0.08"/>
+  <path d="M18 36c4-9 9-16 15-16s11 7 15 16" stroke="url(#g)" stroke-width="4" stroke-linecap="round" fill="none"/>
+  <circle cx="20" cy="36" r="3" fill="url(#g)"/>
+  <circle cx="32" cy="28" r="3" fill="url(#g)"/>
+  <circle cx="44" cy="36" r="3" fill="url(#g)"/>
+  <path d="M22 44h20" stroke="#e2e8f0" stroke-width="3" stroke-linecap="round"/>
+</svg>
+
+
